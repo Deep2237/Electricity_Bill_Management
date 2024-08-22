@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick EBill</h1>
+    </header>
+
+    <nav class="navbar">
+              <ul>
+            <li><a href="./view_bill.html">Home</a></li>
+            <li><a href="./payment.html">Pay Bill</a></li>
+            <li><a href="./new_complaint.html">Register Complaint</a></li>
+            <li><a href="./complaint_status.html">Complaint Status</a></li>
+        </ul>
+    </nav>
+
+    <section class="welcome-section">
+        <div style="margin-top: 4px;margin-right: 13px;">Welcome, Deep</div>
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <section class="view-pay-section">
+        <h3>Payment Screen</h3>
+    </section>
+
+<form id="paymentform">
+
+    <section class="payment-method">
+        <h3>Pay by Credit/Debit Card</h3>
+        <hr>
+
+        <div class="form-group">
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="Enter card number" required>
+        </div>
+
+        <div class="form-group expiration">
+            <label for="exp-month">Expiration Date</label>
+            <input type="text" id="exp-month" placeholder="Month" maxlength="2" required>
+            <input type="text" id="exp-year" placeholder="Year" maxlength="4"required>
+            <input type="text" id="cvv" placeholder="CVV" maxlength="3" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cardholder-name">Card Holder Name</label>
+            <input type="text" id="cardholder-name" placeholder="Enter card holder name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="payable-amount">Payable Amount</label>
+            <input type="text" id="payable-amount" value="₹ 105.00" readonly>
+        </div>
+
+        <section class="action-buttons">
+            <button id="make-payment">Make Payment</button>
+        </section>
+    </section>
+    
+    </form>
+
+    <script src="card.js"></script>
+</body>
+</html>

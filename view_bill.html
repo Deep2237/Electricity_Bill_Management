@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="view_bill.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick EBill</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="./payment.html">Pay Bill</a></li>
+            <li><a href="./new_complaint.html">Register Complaint</a></li>
+            <li><a href="./complaint_status.html">Complaint Status</a></li>
+        </ul>
+    </nav>
+
+    <section class="welcome-section">
+        <div style="margin-top: 4px;margin-right: 13px;">Welcome, Deep</div>
+        <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    </section>
+
+    <section class="view-pay-section">
+        <h3>View Bill & Pay</h3>
+    </section>
+
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr id="tableh">
+                    <th>Consumer Number</th>
+                    <th>Select</th>
+                    <th>Due Amount(₹)</th>
+                    <th>Payable(₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1234563455545</td>
+                    <td><input type="checkbox" class="select-bill" data-amount="500"></td>
+                    <td>500</td>
+                    <td><span>500</span></td>
+                </tr>
+                <tr>
+                    <td>7890124747474</td>
+                    <td><input type="checkbox" class="select-bill" data-amount="750"></td>
+                    <td>750</td>
+                    <td><span>750</span></td>
+                </tr>
+                <tr>
+                    <td>3456787373737</td>
+                    <td><input type="checkbox" class="select-bill" data-amount="600"></td>
+                    <td>600</td>
+                    <td><span>600</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="total-amount-section">
+        <span>Total Amount Payable: ₹<span id="total-amount">0</span></span>
+    </section>
+
+    <section class="proceed-section">
+        <button onclick="proceedToPay()">Proceed to Pay</button>
+    </section>
+
+    <script src="view_bill.js"></script>
+</body>
+</html>

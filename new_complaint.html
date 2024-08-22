@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="new_complaint.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick EBill</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./view_bill.html">Home</a></li>
+            <li><a href="./payment.html">Pay Bill</a></li>
+            <li><a href="#">Register Complaint</a></li>
+            <li><a href="./complaint_status.html">Complaint Status</a></li>
+        </ul>
+    </nav>
+
+    <section class="welcome-section">
+        <div style="margin-top: 4px;margin-right: 13px;">Welcome, Deep</div>
+        <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    </section>
+
+    <section class="view-pay-section">
+        <h3>File New Complaint</h3>
+    </section>
+
+    <form id="complaint-form" onsubmit="return submitComplaint()">
+        <div class="form-container">
+            <div class="left-section">
+                <label for="complaint-type">Complaint/Service Type:</label>
+                <select id="complaint-type" name="complaint-type" onchange="populateCategory()" required>
+                    <option value="">Select Type</option>
+                    <option value="Billing related">Billing related</option>
+                    <option value="Voltage related">Voltage related</option>
+                    <option value="Frequent Disruption">Frequent Disruption</option>
+                    <option value="Street light related">Street light related</option>
+                    <option value="Pole related">Pole related</option>
+                </select>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="">Select Category</option>
+                </select>
+
+                <label for="contact-person">Contact Person:</label>
+                <input type="text" id="contact-person" name="contact-person" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" maxlength="10" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="right-section">
+                <label for="landmark">Landmark:</label>
+                <input type="text" id="landmark" name="landmark">
+
+                <label for="consumer-number">Consumer Number:</label>
+                <input type="tel" id="consumer-number" name="consumer-number" maxlength="13" pattern="[0-9]{13}" required>
+
+                <label for="problem-description">Problem Description:</label>
+                <textarea id="problem-description" name="problem-description" rows="4" required></textarea>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+            </div>
+        </div>
+
+        <div class="button-section">
+            <button type="button" onclick="cancelComplaint()">Cancel</button>
+            <button type="submit">Submit Complaint</button>
+        </div>
+    </form>
+
+
+    <script src="new_complaint.js"></script>
+</body>
+</html>

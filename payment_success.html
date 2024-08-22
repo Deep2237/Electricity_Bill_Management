@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="payment_success.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick EBill</h1>
+    </header>
+
+    <nav class="navbar">
+              <ul>
+            <li><a href="./view_bill.html">Home</a></li>
+            <li><a href="./payment.html">Pay Bill</a></li>
+            <li><a href="./new_complaint.html">Register Complaint</a></li>
+            <li><a href="./complaint_status.html">Complaint Status</a></li>
+        </ul>
+    </nav>
+    
+    <section class="welcome-section">
+        <div style="margin-top: 4px;margin-right: 13px;">Welcome, Deep</div>
+        <div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </section>
+    
+    <section class="view-pay-section">
+        <h3>Payment Done Successfully</h3>
+    </section>
+
+    <section class="total-amount-paid">
+        <h3>Total Amount Paid: ₹ 105.00</h3>
+    </section>
+
+    <section class="transaction-info">
+        <table class="center-table">
+            <thead>
+                <tr>
+                    <th>Transaction Number</th>
+                    <th>Receipt Number</th>
+                    <th>Transaction Date</th>
+                    <th>Type</th>
+                    <th>Payment Gateway</th>
+                    <th>Consumer Number</th>
+                    <th>Paid Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TX123456</td>
+                    <td>RC654321</td>
+                    <td>2024-08-22</td>
+                    <td>Online</td>
+                    <td>Gateway1</td>
+                    <td>123456789</td>
+                    <td>₹ 105.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="action-buttons">
+        <button id="back-home">Back to Home</button>
+        <button id="download-receipt">Download</button>
+    </section>
+
+    <script src="payment_success.js"></script>
+</body>
+</html>

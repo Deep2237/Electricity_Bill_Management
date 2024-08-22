@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="newuser.css">
+</head>
+<body>
+
+
+    <section class="heading-section">
+        <h3>Register New User</h3>
+    </section>
+
+    
+
+     <form id="registration-form" onsubmit="return register();">
+
+        <div class="title-section">Consumer Details</div>
+    <hr>
+        <div class="form-container">
+            <div class="left-section">
+                <label for="consumer-number">Consumer Number:</label>
+                <input type="number" id="consumer-number" name="consumer-number" maxlength="13" placeholder="Consumer Number" required>
+            </div>
+
+            <div class="right-section">
+                <label for="bill-number">Bill Number:</label>
+                <input type="number" id="bill-number" name="bill-number" maxlength="5" placeholder="Bill Number" required>
+            </div>
+        </div>
+
+        <div class="title-section">User Details</div>
+    <hr>
+        <div class="form-container">
+            <div class="left-section">
+                <label for="title">Title:</label>
+                <select id="title" name="title">
+                    <option value="">Please Select</option>
+                    <option value="Mr">Mr</option>
+                    <option value="Ms">Ms</option>
+                    <option value="Mrs">Mrs</option>
+                    <option value="Dr">Dr</option>
+                </select>
+
+                </div>
+
+                <div class="right-section">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" maxlength="50" placeholder="Enter Your Name" required>
+
+                    </div>
+                    </div>
+
+                    <div class="form-container">
+                        <div class="left-section">
+            
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="right-section">
+                <label for="mobile-code">Mobile Number:</label>
+                    <select id="mobile-code" name="mobile-code" required>
+                        <option value="+91">+91 India</option>
+                        <option value="+1">+1 USA</option>
+                        <option value="+44">+44 UK</option>
+                        <option value="+61">+61 Germany</option>
+                    </select> 
+                    <br>                   
+                    <input type="number" id="mobile-number" name="mobile-number" placeholder="Mobile Number" maxlength="10" pattern="[0-9]{10}" style="margin-left: 114px;" required>
+            </div>
+        </div>
+
+        <div class="title-section">Login Details</div>
+        <hr>
+
+        <div class="form-container">
+            <div class="left-section">
+                <label for="user-id">User ID:</label>
+                <input type="text" id="user-id" name="user-id" placeholder="User Id" minlength="5" maxlength="20" required>
+            </div>
+
+            <div class="right-section">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" maxlength="30" required>
+
+                <br>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" maxlength="30" placeholder="Confirm Password" style="margin-top: 30px;" required>
+            </div>
+        </div>
+        <div class="button-section">
+            <button type="reset">Reset</button>
+            <button type="submit">Register</button>
+        </div>
+    
+
+
+    </form>
+    
+
+    <script src="newuser.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick EBill</h1>
+    </header>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="./view_bill.html">Home</a></li>
+            <li><a href="./payment.html">Pay Bill</a></li>
+            <li><a href="./new_complaint.html">Register Complaint</a></li>
+            <li><a href="./complaint_status.html">Complaint Status</a></li>
+        </ul>
+
+    </nav>
+    
+    <section class="welcome-section">
+        <div style="margin-top: 4px;margin-right: 13px;">Welcome, Deep</div>
+        <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    </section>
+    
+     <section class="view-pay-section">
+        <h3>Bill Payment</h3>
+    </section>
+    
+    <section class="bill-payment">
+        <p>For detailed payment instructions</p>
+        <button id="instructions-button">Click Here</button>
+    </section>
+
+    <section class="bill-details">
+        <table>
+            <caption>Bill Details</caption>
+            <tr>
+                <td>Bill Amount</td>
+                <td>₹ 100.00</td>
+            </tr>
+            <tr>
+                <td>Total Payable Amount</td>
+                <td>₹ 105.00</td>
+            </tr>
+            <tr>
+                <td>PG Charge</td>
+                <td>₹ 5.00</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="consumer-bill-info">
+        <table class="center-table">
+            <thead>
+                <tr>
+                    <th>Consumer Number</th>
+                    <th>Bill Number</th>
+                    <th>Payable Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123456789</td>
+                    <td>987654321</td>
+                    <td>₹ 105.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="payment-method">
+        <h3>Select Your Mode of Payment</h3>
+        <hr>
+        <label>
+            <input type="radio" name="payment-method" value="credit-card"> Credit Card
+        </label>
+        <label>
+            <input type="radio" name="payment-method" value="debit-card"> Debit Card
+        </label>
+    </section>
+
+    <section class="action-buttons">
+        <button id="pay-now">Pay Now</button>
+        <button id="back-home">Back to Home</button>
+    </section>
+
+    <script src="payment.js"></script>
+</body>
+</html>

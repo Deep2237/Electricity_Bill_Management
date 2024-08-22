@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick EBill</title>
+    <link rel="stylesheet" href="complaint_status.css">
+</head>
+<body>
+
+    <header>
+        <h1>Quick EBill</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="./view_bill.html">Home</a></li>
+            <li><a href="./payment.html">Pay Bill</a></li>
+            <li><a href="./new_complaint.html">Register Complaint</a></li>
+            <li><a href="">Complaint Status</a></li>
+        </ul>
+    </nav>
+
+    <section class="welcome-section">
+        <div style="margin-top: 4px;margin-right: 13px;">Welcome, Deep</div>
+        <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+    </section>
+
+    <section class="view-pay-section">
+        <h3>Check Your Complaint Here</h3>
+    </section>
+
+    <form id="complaint-form" onsubmit="return submitComplaint()">
+        <div class="form-container">
+            <label for="complaint-number">Complaint Number:</label>
+            <input type="number" id="complaint-number" name="complaint-number"  required>
+        </div>
+
+        <div class="button-section">
+            <button type="reset">Reset</button>
+            <button type="submit">Get Complaint Status</button>
+        </div>
+    </form>
+
+
+    <script src="complaint_status.js"></script>
+</body>
+</html>

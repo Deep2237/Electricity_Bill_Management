@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+}
+
+header {
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: brown;
+}
+
+nav {
+    background-color: gray;
+    padding: 10px 0 10px 50px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content:flex-end;
+    padding: 20px;
+    background-color: #e0e0e0;
+}
+
+.welcome-section button {
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.view-pay-section {
+    padding: 0.2px;
+    background-color: #007bff;
+    color: white;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.view-pay-section > h3 {
+    margin-left: 18px;
+}
+
+.payment-method {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.payment-method h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.payment-method hr {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group.expiration input {
+    width: calc(33.33% - 8px);
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.form-group.expiration input:last-child {
+    margin-right: 0;
+}
+
+.action-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.action-buttons button {
+    padding: 10px 20px;
+    background-color: gold;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.action-buttons button:hover {
+    opacity: 0.9;
+}
